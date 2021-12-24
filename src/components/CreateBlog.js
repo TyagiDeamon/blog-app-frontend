@@ -19,13 +19,13 @@ function CreateBlog() {
 	};
 
 	return (
-		<div className="hidden md:block bg-gradient-to-r from-green-400 to-indigo-500 md:w-[40%] h-full rounded-md md:rounded-t-md py-2">
-			<div className="text-center text-xl font-extrabold">Write a blog</div>
+		<div className="hidden md:block md:w-[40%] h-full rounded-t-md md:rounded-t-md py-2 border-2 md:border-b-0 md:border-l-0 text-gray-100 bg-[#2c2c61] border-orange-500">
+			<div className="text-center text-xl font-bold">Write a blog</div>
 			<div className="mt-4">
 				<form className="flex flex-col px-16 gap-4">
 					<input
 						placeholder="Author Name"
-						className="rounded-md p-4 caret-red-500"
+						className="rounded-md p-4 caret-red-500 shadow-md shadow-rose-500"
 						value={query.author}
 						onChange={(event) =>
 							setQuery({ ...query, author: event.target.value })
@@ -33,7 +33,7 @@ function CreateBlog() {
 					/>
 					<input
 						placeholder="Title"
-						className="rounded-md p-4 caret-red-500"
+						className="rounded-md p-4 caret-red-500 shadow-md shadow-green-500"
 						value={query.title}
 						onChange={(event) =>
 							setQuery({ ...query, title: event.target.value })
@@ -42,7 +42,7 @@ function CreateBlog() {
 					<textarea
 						rows="8"
 						placeholder="Your blog"
-						className="rounded-md p-4 caret-red-500 resize-y"
+						className="rounded-md p-4 caret-red-500 resize-y shadow-md shadow-cyan-500"
 						value={query.content}
 						onChange={(event) =>
 							setQuery({ ...query, content: event.target.value })
@@ -50,7 +50,7 @@ function CreateBlog() {
 					></textarea>
 
 					<div
-						className="bg-black text-white rounded-md w-min mx-auto px-4 py-2 mt-4 cursor-pointer"
+						className="bg-gradient-to-r from-rose-500 to-orange-500 text-white rounded-md w-min mx-auto px-4 py-2 mt-4 cursor-pointer hover:scale-105 transition shadow-md shadow-red-500/60"
 						onClick={submitQuery}
 					>
 						Submit

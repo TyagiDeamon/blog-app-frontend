@@ -8,6 +8,9 @@ function CreateBlogButton() {
 		<>
 			{showCreateBlog && (
 				<div className="flex justify-center items-center h-screen w-screen z-10 top-0 fixed">
+					{/* <div className="h-8 w-8 fixed bg-black rounded-full right-8 z-50 flex items-center justify-center shadow-md shadow-gray-200/60">
+						x
+					</div> */}
 					<SmallScreen />
 				</div>
 			)}
@@ -18,7 +21,7 @@ function CreateBlogButton() {
 				>
 					{!showCreateBlog && (
 						<div
-							className="h-full w-full flex items-center justify-center text-2xl font-extrabold text-gray-300 bg-gray-900 rounded-full"
+							className="h-full w-full flex items-center justify-center text-2xl font-bold text-gray-300 bg-gradient-to-r from-rose-500 to-orange-500 rounded-full"
 							onClick={() => setShowCreateBlog(!showCreateBlog)}
 						>
 							+
@@ -26,7 +29,7 @@ function CreateBlogButton() {
 					)}
 					{showCreateBlog && (
 						<div
-							className="h-full w-full flex items-center justify-center text-2xl font-extrabold text-gray-300 bg-red-600/100 rounded-full"
+							className="h-full w-full flex items-center justify-center text-2xl font-bold text-gray-300 bg-red-600/100 rounded-full"
 							onClick={() => setShowCreateBlog(!showCreateBlog)}
 						>
 							x

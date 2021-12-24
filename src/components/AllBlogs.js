@@ -14,7 +14,7 @@ function AllBlogs() {
 		});
 	}, []);
 	return (
-		<div className="flex-1 bg-white flex flex-col gap-4 py-2 overflow-auto rounded-t-md">
+		<div className="flex-1 flex flex-col gap-4 py-8 overflow-auto rounded-t-md md:border-2 text-gray-200 md:border-b-0 md:border-r-0 border-orange-500 snap-y scroll-pt-6">
 			{showLoader && (
 				<div class="shadow rounded-md p-4 max-w-sm w-full mx-auto">
 					<div class="animate-pulse flex space-x-4">
